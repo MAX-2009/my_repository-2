@@ -1,0 +1,85 @@
+
+{% extends 'index.html' %}
+
+
+{% block title %}
+{% load static %}
+
+
+{% endblock %}
+
+{% block content %}
+    <div class="music-player4">
+        <!-- Контейнер для изображения -->
+        <div class="cover2">
+            <img src="{% static 'img/ff.png' %}" alt="Изображение пульсара PSR B0329+54">
+        </div>
+
+        <!-- Текстовая информация о пульсаре -->
+        <div class="titre">
+            <h1>PSR B0329+54</h1> <!-- Заголовок H1 для главной информации -->
+            <h3>Источник: пульсар</h3> <!-- Подзаголовок для источника -->
+            <h4>Частота: от 100 МГц до 1,4 ГГц</h4>
+            <h4>Запись: "данные отсутствуют"</h4>
+            <h4>Фильтры: "данные отсутствуют"</h4>
+
+        </div>
+
+
+<div class="small-gap"></div>
+
+        <!-- Аудиоплеер -->
+        <div class="lecteur">
+            <audio class="fc-media" id="fc-media" controls>
+                <source src="{% static 'img/pulsar.mp3' %}" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоформат.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Второй музыкальный плеер -->
+
+
+
+
+
+
+    <div class="music-player3">
+        <!-- Контейнер для изображения -->
+        <div class="cover2">
+            <img src="{% static 'img/надо.jpg' %}" alt="Изображение пульсара PSR B1919+21">
+        </div>
+
+        <!-- Текстовая информация о пульсаре -->
+        <div class="titre">
+            <h1>сигнал Little Green Man</h1> <!-- Заголовок H1 для главной информации -->
+            <h3>Источник: пульсар</h3> <!-- Подзаголовок для источника -->
+            <h4>Частота: от 81.5 МГц до 408 МГц.</h4>
+            <h4>запись: радиотелескоп "Аресибо"</h4>
+            <h4>Фильтры: "данные отсутствуют"</h4>
+        </div>
+
+
+<div class="small-gap"></div>
+
+        <!-- Аудиоплеер -->
+        <div class="lecteur">
+            <audio class="fc-media" id="fc-media" controls>
+                <source src="{% static 'img/звук.mp3' %}" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоформат.
+            </audio>
+        </div>
+    </div>
+
+    <div class="right-section">
+      <div class="lyrics-container">
+        <div class="lyrics">
+            <p id="song-lyrics" class="song-lyrics" data-lyrics="{{item.lyrics}}"></p>
+            <h0>
+                 <h1>страница с сигналом</h1>
+                 <img src="{% static 'img/рад2.png' %}" >
+            </h0>
+        </div>
+     </div>
+    </div>
+{% endblock %}

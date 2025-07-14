@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+{% load static %}
+
+    солнышко
+{% endblock %}
+
+{% block content %}
+
+
+
+
+      <div class="music-player2">
+
+
+       <div class="cover">
+        <img src="{% static 'img/сол.png' %}" >
+       </div>
+
+       <div class="titre">
+
+        <h3>
+         солнце
+        </h3>
+        <h1>
+         звук с солнца
+
+        </h1>
+       </div>
+.
+       <div class="lecteur">
+        <audio class="fc-media" style="width: 100%;" id="fc-media">
+         <source src="{% static 'img/сол.mp3' %}"/>
+        </audio>
+       </div>
+      </div>
+    <div class="right-section">
+      <div class="lyrics-container">
+        <div class="lyrics">
+            <p id="song-lyrics" class="song-lyrics" data-lyrics="{{item.lyrics}}"></p>
+            <h0>
+                 <h1>страница со звуками солнца</h1>
+                 <img src="{% static 'img/рад2.png' %}" >
+            </h0>
+        </div>
+     </div>
+    </div>
+{% endblock %}
